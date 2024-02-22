@@ -1,0 +1,2685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uranyum Library Document</title>
+    <link rel="stylesheet" href="Assets/CSS/dokuman.css">
+</head>
+<body>
+  <section class="main">
+    <div class="navbar">
+      <ul>
+          <li><a href="#grid">Grid</a></li>
+          <li><a href="#color">Color</a></li>
+          <li><a href="#font-size">Font Size</a></li>
+          <li><a href="#font-style">Font Style</a></li>
+          <li><a href="#margin-padding">Margin ve Padding</a></li>
+          <li><a href="#slider">Slider</a></li>
+          <li><a href="#tables">Tables</li>
+          <li><a href="#images">Images</a></li>
+          <li><a href="#button">Button</a></li>
+          <li><a href="#owerflow-div">Div</a></li>
+          <li><a href="#navigationbar">Navbar</a></li>
+          <li><a href="#dropdown-menu">Dropdown Menü</a></li>
+          <li><a href="#form">Form</a></li>
+         
+      </ul>
+    </div>
+    <div class="content">
+      <div class="doc-hdr">
+        <h1>URANYUM CSS KÜTÜPHANE DOKÜMANI</h1>
+      </div>
+      <p class="explanatory">
+        Uranyum, daha pratik tasarımlar için kullanılabilir kod parçalarından oluşan web uygulaması geliştirme araç takımıdır.Bu kütüphanenin kullanılabilmesi için, geliştirilen web projesindeki html sayfasının "head" kısmına aşağıdaki CDN bağlantısınıın yerleştirilmesi gerekir: 
+          <br>
+          <strong><u>	https://cdn.ury.net/uranyum@1.1.1/dist/css/uranyum.min.css</u></strong><br>
+          Daha sonra, dokümantasyonda örnekleri gösterilen, ihtiyacınıza uygun,  kullanmak istediğiniz CSS özelliklerini içeren class ismini kullandığınız HTML etiketinize vermeniz gerekmektedir.
+      </p>
+      <h1 class="ana-baslik" id="grid">1.Grid</h1>
+      <p class="explanatory">
+        -Her bir colon 12'lik sistemde sayısı kadar yer kaplayacak şekilde bir grid yapısı oluşturularak 12 tane class oluşturuldu.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*GRID*/
+        .container {
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            grid-gap: 20px;
+        }
+        
+        .grd{
+            width:auto;
+            height:35px;
+            background-color: orange;
+            color:#3e2723;
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+           padding-top:2px;
+        }
+        
+        .grid-col1{
+            grid-column:span 1;
+        }
+        .grid-col2{
+            grid-column:span 2;
+        }
+        .grid-col3{
+            grid-column:span 3;
+        }
+        .grid-col4{
+            grid-column:span 4;
+        }
+        .grid-col5{
+            grid-column:span 5;
+        }
+        .grid-col6{
+            grid-column:span 6;
+        }
+        .grid-col7{
+            grid-column:span 7;
+        }
+        .grid-col8{
+            grid-column:span 8;
+        }
+        .grid-col9{
+            grid-column:span 9;
+        }
+        .grid-col10{
+            grid-column:span 10;
+        }
+        .grid-col11{
+            grid-column:span 11;
+        }
+        
+        .grid-col12{
+            grid-column:span 12;
+        }
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediiğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+            <div class="container">
+                <div class="grid-col12 grd">Grid 12</div>
+                <div class="grid-col1 grd" >Grid 1</div>
+                <div class="grid-col11 grd">Grid 11</div>
+                <div class="grid-col2 grd" >Grid 2</div>
+                <div class="grid-col10 grd">Grid 10</div>
+                <div class="grid-col3 grd" >Grid 3</div>
+                <div class="grid-col9 grd" >Grid 9</div>
+                <div class="grid-col4 grd" >Grid 4</div>
+                <div class="grid-col8 grd" >Grid 8</div>
+                <div class="grid-col5 grd" >Grid 5</div>
+                <div class="grid-col7 grd" >Grid 7</div>
+                <div class="grid-col6 grd" >Grid 6</div>
+                <div class="grid-col6 grd" >Grid 6</div>
+            </div>
+          <textarea class="code">
+            <div class="container">
+
+              <p class="grid-col12 grd">Grid 12</p>
+
+              <p class="grid-col1 grd" >Grid 1</p>
+
+              <p class="grid-col11 grd">Grid 11</p>
+
+              <p class="grid-col2 grd" >Grid 2</p>
+
+              <p class="grid-col10 grd">Grid 10</p>
+
+              <p class="grid-col3 grd" >Grid 3</p>
+
+              <p class="grid-col9 grd" >Grid 9</p>
+
+              <p class="grid-col4 grd" >Grid 4</p>
+
+              <p class="grid-col8 grd" >Grid 8</p>
+
+              <p class="grid-col5 grd" >Grid 5</p>
+
+              <p class="grid-col7 grd" >Grid 7</p>
+
+              <p class="grid-col6 grd" >Grid 6</p>
+
+              <p class="grid-col6 grd" >Grid 6</p>
+              
+          </div>
+          </textarea>
+      <h1 class="ana-baslik" id="color">2.Color</h1>
+      <p class="explanatory">
+        -Projenizin tamamında kolaylıkla değiştirilebilir olması için 10 adet renk ismi ve renk tonu <b>:root</b> altında tanımlandı.<br>
+        -Renkler, arka plan rengi, yazı rengi ve hover rengi olmak üzere aynı rengin 3 farklı tonu olacak şekilde ayarlanıp 30 adet class oluşturuldu.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*RENKLER*/
+
+        /*Kırmızı*/
+        .bg-red {
+          background-color: var(--color-light-red) !important;
+        }
+        .txt-red {
+          color: var(--color-dark-red) !important;
+          text-shadow: 1px 1px 2px white;
+        }
+        .bg-red:hover {
+          background-color: var(--color-medium-red) !important;
+        }
+        
+        /*Pembe*/
+        .bg-pink {
+          background-color: var(--color-light-pink) !important;
+        }
+        .txt-pink {
+          color: var(--color-dark-pink) !important;
+          text-shadow: 1px 1px 2px white;
+        }
+        .bg-pink:hover {
+          background-color: var(--color-medium-pink) !important;
+        }
+        /*Mor*/
+        .bg-purple {
+          background-color: var(--color-light-purple) !important;
+        }
+        .txt-purple {
+          color: var(--color-dark-purple) !important;
+          text-shadow: 1px 1px 2px white;
+        }
+        .bg-purple:hover {
+          background-color: var(--color-medium-purple) !important;
+        }
+        /*Mavi*/
+        .bg-blue {
+          background-color: var(--color-light-blue) !important;
+        }
+        .txt-blue {
+          color: var(--color-dark-blue) !important;
+          text-shadow: 1px 1px 2px white;
+        }
+        .bg-blue:hover {
+          background-color: var(--color-medium-blue) !important;
+        }
+        /*Yeşil*/
+        .bg-green {
+          background-color: var(--color-light-green) !important;
+        }
+        .txt-green {
+          color: var(--color-dark-green) !important;
+          text-shadow: 1px 1px 2px white;
+        }
+        .bg-green:hover {
+          background-color: var(--color-medium-green) !important;
+        }
+        /*Sarı*/
+        .bg-yellow {
+          background-color: var(--color-light-yellow) !important;
+        }
+        .txt-yellow {
+          color: var(--color-dark-yellow) !important;
+          text-shadow: 1px 1px 2px white;
+        }
+        .bg-yellow:hover {
+          background-color: var(--color-medium-yellow) !important;
+        }
+        /*Turuncu*/
+        .bg-orange {
+          background-color: var(--color-light-orange) !important;
+        }
+        .txt-orange {
+          color: var(--orange-dark-orange) !important;
+          text-shadow: 1px 1px 2px white;
+        }
+        .bg-orange:hover {
+          background-color: var(--color-medium-orange) !important;
+        }
+        /*Kahverengi*/
+        .bg-brown {
+          background-color: var(--color-light-brown) !important;
+        }
+        .txt-brown {
+          color: var(--color-dark-brown) !important;
+          text-shadow: 1px 1px 2px white;
+        }
+        .bg-brown:hover {
+          background-color: var(--color-medium-brown) !important;
+        }
+        /*Gri*/
+        .bg-gray {
+          background-color: var(--color-light-gray) !important;
+        }
+        .txt-gray {
+          color: var(--color-dark-gray) !important;
+          text-shadow: 1px 1px 2px white;
+        }
+        .bg-gray:hover {
+          background-color: var(--color-medium-gray) !important;
+        }
+        /*Cyan*/
+        .bg-cyan {
+          background-color: var(--color-light-cyan) !important;
+        }
+        .txt-cyan {
+          color: var(--color-dark-cyan) !important;
+          text-shadow: 1px 1px 2px white;
+        }
+        .bg-cyan:hover {
+          background-color: var(--color-medium-cyan) !important;
+        }
+      </textarea>
+
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediiğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+
+      <div class="renkler">
+        <div class="bg-red renk-palet">
+          <h2 class="txt-red">Kırmızı</h2>
+        </div>
+        <div class="bg-pink renk-palet">
+          <h2 class="txt-pink">Pembe</h2>
+        </div>
+        <div class="bg-purple renk-palet">
+          <h2 class="txt-purple">Mor</h2>
+        </div>
+        <div class="bg-blue renk-palet">
+          <h2 class="txt-blue">Mavi</h2>
+        </div>
+        <div class="bg-green renk-palet">
+          <h2 class="txt-green">Yeşil</h2>
+        </div>
+        <div class="bg-yellow renk-palet">
+          <h2 class="txt-yellow">Sarı</h2>
+        </div>
+        <div class="bg-orange renk-palet">
+          <h2 class="txt-orange">Turuncu</h2>
+        </div>
+        <div class="bg-brown renk-palet">
+          <h2 class="txt-brown">Kahve</h2>
+        </div>
+        <div class="bg-gray renk-palet">
+          <h2 class="txt-gray">Gri</h2>
+        </div>
+        <div class="bg-cyan renk-palet">
+          <h2 class="txt-cyan">Cyan</h2>
+        </div>
+      </div>
+      
+      <textarea class="code">
+        
+            <div class="bg-red renk-palet">
+              <h2 class="txt-red">Kırmızı</h2>
+            </div>
+
+            <div class="bg-pink renk-palet">
+              <h2 class="txt-pink">Pembe</h2>
+            </div>
+
+            <div class="bg-purple renk-palet">
+              <h2 class="txt-purple">Mor</h2>
+            </div>
+
+            <div class="bg-blue renk-palet">
+              <h2 class="txt-blue">Mavi</h2>
+            </div>
+
+            <div class="bg-green renk-palet">
+              <h2 class="txt-green">Yeşil</h2>
+            </div>
+
+            <div class="bg-yellow renk-palet">
+              <h2 class="txt-yellow">Sarı</h2>
+            </div>
+
+            <div class="bg-orange renk-palet">
+              <h2 class="txt-orange">Turuncu</h2>
+            </div>
+
+            <div class="bg-brown renk-palet">
+              <h2 class="txt-brown">Kahve</h2>
+            </div>
+
+            <div class="bg-gray renk-palet">
+              <h2 class="txt-gray">Gri</h2>
+            </div>
+
+            <div class="bg-cyan renk-palet">
+              <h2 class="txt-cyan">Cyan</h2>
+            </div>
+            
+          
+      </textarea>
+
+      <h1 class="ana-baslik" id="font-size">3.Font Size</h1>
+      <p class="explanatory">
+        -Projenizin tamamında kolayca değiştirilebilir olması için, 10 adet normal yazılarda, 5 adet de başlıklarda kullanılmak üzere toplamda 15 adet yazı boyutu <b>:root</b> altında tanımlanarak 15 adet class oluşturuldu.<br>
+        -Başlıklar için tanımlanan yazı boyutlarının "font-weight" özelliği bold olarak ayarlandı.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*YAZI BOYUTU*/
+        .txt-font-7 {
+          font-size: var(--fs-1);
+        }
+        .txt-font-8 {
+          font-size: var(--fs-2);
+        }
+        .txt-font-10 {
+          font-size: var(--fs-3);
+        }
+        .txt-font-12 {
+          font-size: var(--fs-4);
+        }
+        .txt-font-14 {
+          font-size: var(--fs-5);
+        }
+        .txt-font-15 {
+          font-size: var(--fs-6);
+        }
+        .txt-font-16 {
+          font-size: var(--fs-7);
+        }
+        .txt-font-18 {
+          font-size: var(--fs-8);
+        }
+        .txt-font-20 {
+          font-size: var(--fs-9);
+        }
+        .txt-font-22 {
+          font-size: var(--fs-10);
+        }
+        /*BAŞLIKLAR İÇİN YAZI BOYUTU*/
+        .hdr-font-40 {
+          font-size: var(--fs-11);
+          font-weight: bold;
+        }
+        .hdr-font-36 {
+          font-size: var(--fs-12);
+          font-weight: bold;
+        }
+        .hdr-font-32 {
+          font-size: var(--fs-13);
+          font-weight: bold;
+        }
+        .hdr-font-28 {
+          font-size: var(--fs-14);
+          font-weight: bold;
+        }
+        .hdr-font-24 {
+          font-size: var(--fs-15);
+          font-weight: bold;
+        }
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediiğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+      <h2 class="ara-baslik">3.1 Text-Font Size</h2>
+      <div class="fs-ornek">
+        <p class="txt-font-7">Hello World</p>
+        <p class="txt-font-8">Hello World</p>
+        <p class="txt-font-10">Hello World</p>
+        <p class="txt-font-12">Hello World</p>
+        <p class="txt-font-14">Hello World</p>
+        <p class="txt-font-15">Hello World</p>
+        <p class="txt-font-16">Hello World</p>
+        <p class="txt-font-18">Hello World</p>
+        <p class="txt-font-20">Hello World</p>
+        <p class="txt-font-22">Hello World</p>
+      </div>
+
+      <textarea class="code">
+        <p class="txt-font-7">Hello World</p>
+
+        <p class="txt-font-8">Hello World</p>
+
+        <p class="txt-font-10">Hello World</p>
+
+        <p class="txt-font-12">Hello World</p>
+
+        <p class="txt-font-14">Hello World</p>
+
+        <p class="txt-font-15">Hello World</p>
+
+        <p class="txt-font-16">Hello World</p>
+
+        <p class="txt-font-18">Hello World</p>
+
+        <p class="txt-font-20">Hello World</p>
+
+        <p class="txt-font-22">Hello World</p>
+
+      </textarea>
+
+      <h2 class="ara-baslik">3.2 Header-Font Size</h2>
+      <div class="fs-ornek">
+        <p class="hdr-font-24">Hello World</p>
+        <p class="hdr-font-28">Hello World</p>
+        <p class="hdr-font-32">Hello World</p>
+        <p class="hdr-font-36">Hello World</p>
+        <p class="hdr-font-40">Hello World</p>
+      </div>
+
+      <textarea class="code">
+        <p class="hdr-font-24">Hello World</p>
+
+        <p class="hdr-font-28">Hello World</p>
+
+        <p class="hdr-font-32">Hello World</p>
+
+        <p class="hdr-font-36">Hello World</p>
+
+        <p class="hdr-font-40">Hello World</p>
+      </textarea>
+
+      <h1 class="ana-baslik" id="font-style">4.Font Style</h1>
+      <p class="explanatory"> 
+        -Projenizin tamamında kolayca değiştirilebilir olması için 5 adet yazı tipi <b>:root</b> altında tanımlanıp 5 tane class oluştururldu.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*YAZI TİPİ*/
+        .Arial {
+          font-family: var(--font-1);
+        }
+        .Times-Roman {
+          font-family: var(--font-2);
+        }
+        .Verdana {
+          font-family: var(--font-3);
+        }
+        .Tahoma {
+          font-family: var(--font-4);
+        }
+        .SegoeUI {
+          font-family: var(--font-5);
+        }
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediiğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+      <div class="fstyle-ornek">
+        <p class="Arial">Hello World</p>
+        <p class="Times-Roman">Hello World</p>
+        <p class="Verdana">Hello World</p>
+        <p class="Tahoma">Hello World</p>
+        <p class="SegoeUI">Hello World</p>
+      </div>
+      <textarea class="code">
+        <p class="Arial">Hello World</p>
+
+        <p class="Times-Roman">Hello World</p>
+
+        <p class="Verdana">Hello World</p>
+
+        <p class="Tahoma">Hello World</p>
+
+        <p class="SegoeUI">Hello World</p>
+      </textarea>
+
+      <h1 class="ana-baslik" id="margin-padding">5.Margin ve Padding</h1>
+      <p class="explanatory">
+        -Prpjenizin tamamında kolayca değiştirilebilir olması için 6 farklı ölçülerde olmak üzere margin, margin-left, margin-right, margin-top, margin-bottom, padding, padding-left, padding-right, padding-top, padding-bottom değerleri :root altında tanımlanıp toplamda 60 tane class oluşturuldu.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*MARGIN*/
+        .m0 {
+          margin: var(--margin-0);
+        }
+        .m1 {
+          margin: var(--margin-1);
+        }
+        .m2 {
+          margin: var(--margin-2);
+        }
+        .m3 {
+          margin: var(--margin-3);
+        }
+        .m4 {
+          margin: var(--margin-4);
+        }
+        .m5 {
+          margin: var(--margin-5);
+        }
+        /*Margin-left*/
+        .ml-0 {
+          margin-left: var(--margin-0);
+        }
+        .ml-1 {
+          margin-left: var(--margin-1);
+        }
+        .ml-2 {
+          margin-left: var(--margin-2);
+        }
+        .ml-3 {
+          margin-left: var(--margin-3);
+        }
+        .ml-4 {
+          margin-left: var(--margin-4);
+        }
+        .ml-5 {
+          margin-left: var(--margin-5);
+        }
+        /*Margin-right*/
+        .mr-0 {
+          margin-right: var(--margin-0);
+        }
+        .mr-1 {
+          margin-right: var(--margin-1);
+        }
+        .mr-2 {
+          margin-right: var(--margin-2);
+        }
+        .mr-3 {
+          margin-right: var(--margin-3);
+        }
+        .mr-4 {
+          margin-right: var(--margin-4);
+        }
+        .mr-5 {
+          margin-right: var(--margin-5);
+        }
+        /*Margin-top*/
+        .mt-0 {
+          margin-top: var(--margin-0);
+        }
+        .mt-1 {
+          margin-top: var(--margin-1);
+        }
+        .mt-2 {
+          margin-top: var(--margin-2);
+        }
+        .mt-3 {
+          margin-top: var(--margin-3);
+        }
+        .mt-4 {
+          margin-top: var(--margin-4);
+        }
+        .mt-5 {
+          margin-top: var(--margin-5);
+        }
+        
+        /*Margin-bottom*/
+        .mb-0 {
+          margin-bottom: var(--margin-0);
+        }
+        .mb-1 {
+          margin-bottom: var(--margin-1);
+        }
+        .mb-2 {
+          margin-bottom: var(--margin-2);
+        }
+        .mb-3 {
+          margin-bottom: var(--margin-3);
+        }
+        .mb-4 {
+          margin-bottom: var(--margin-4);
+        }
+        .mb-5 {
+          margin-bottom: var(--margin-5);
+        }
+        
+        /*PADDING*/
+        .p-0 {
+          padding: var(--padding-0);
+        }
+        .p-1 {
+          padding: var(--padding-1);
+        }
+        .p-2 {
+          padding: var(--padding-2);
+        }
+        .p-3 {
+          padding: var(--padding-3);
+        }
+        .p-4 {
+          padding: var(--padding-4);
+        }
+        .p-5 {
+          padding: var(--padding-5);
+        }
+        /*Padding-left*/
+        .pl-0 {
+          padding-left: var(--padding-0);
+        }
+        .pl-1 {
+          padding-left: var(--padding-1);
+        }
+        .pl-2 {
+          padding-left: var(--padding-2);
+        }
+        .pl-3 {
+          padding-left: var(--padding-3);
+        }
+        .pl-4 {
+          padding-left: var(--padding-4);
+        }
+        .pl-5 {
+          padding-left: var(--padding-5);
+        }
+        /*Padding-right*/
+        .pr-0 {
+          padding-right: var(--padding-0);
+        }
+        .pr-1 {
+          padding-right: var(--padding-1);
+        }
+        .pr-2 {
+          padding-right: var(--padding-2);
+        }
+        .pr-3 {
+          padding-right: var(--padding-3);
+        }
+        .pr-4 {
+          padding-right: var(--padding-4);
+        }
+        .pr-5 {
+          padding-right: var(--padding-5);
+        }
+        /*Padding-top*/
+        .pt-0 {
+          padding-top: var(--padding-0);
+        }
+        .pt-1 {
+          padding-top: var(--padding-1);
+        }
+        .pt-2 {
+          padding-top: var(--padding-2);
+        }
+        .pt-3 {
+          padding-top: var(--padding-3);
+        }
+        .pt-4 {
+          padding-top: var(--padding-4);
+        }
+        .pt-5 {
+          padding-top: var(--padding-5);
+        }
+        /*Padding-bottom*/
+        .pb-0 {
+          padding-bottom: var(--padding-0);
+        }
+        .pb-1 {
+          padding-bottom: var(--padding-1);
+        }
+        .pb-2 {
+          padding-bottom: var(--padding-2);
+        }
+        .pb-3 {
+          padding-bottom: var(--padding-3);
+        }
+        .pb-4 {
+          padding-bottom: var(--padding-4);
+        }
+        .pb-5 {
+          padding-bottom: var(--padding-5);
+        }
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediiğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+      <h2 class="ara-baslik">5.1 Margin</h2>
+      <div class="margin-orn">
+        <div class="margin-ornek m0">
+          <h2>m0</h2>
+        </div>
+        <div class="margin-ornek m1">
+          <h2>m1</h2>
+        </div>
+        <div class="margin-ornek m2">
+          <h2>m2</h2>
+        </div>
+        <div class="margin-ornek m3">
+          <h2>m3</h2>
+        </div>
+        <div class="margin-ornek m4">
+          <h2>m4</h2>
+        </div>
+        <div class="margin-ornek m5">
+          <h2>m5</h2>
+        </div>
+      </div>
+      <textarea class="code">
+        
+          <div class="margin-ornek m0">
+            <h2>m0</h2>
+          </div>
+
+          <div class="margin-ornek m1">
+            <h2>m1</h2>
+          </div>
+
+          <div class="margin-ornek m2">
+            <h2>m2</h2>
+          </div>
+
+          <div class="margin-ornek m3">
+            <h2>m3</h2>
+          </div>
+
+          <div class="margin-ornek m4">
+            <h2>m4</h2>
+          </div>
+
+          <div class="margin-ornek m5">
+            <h2>m5</h2>
+          </div>
+
+        
+      </textarea>
+      <h2 class="ara-baslik">5.2 Margin Left</h2>
+      <div class="margin-orn">
+        <div class="margin-ornek ml-0">
+          <h2>ml-0</h2>
+        </div>
+        <div class="margin-ornek ml-1">
+          <h2>ml-1</h2>
+        </div>
+        <div class="margin-ornek ml-2">
+          <h2>ml-2</h2>
+        </div>
+        <div class="margin-ornek ml-3">
+          <h2>ml-3</h2>
+        </div>
+        <div class="margin-ornek ml-4">
+          <h2>ml-4</h2>
+        </div>
+        <div class="margin-ornek ml-5">
+          <h2>ml-5</h2>
+        </div>
+      </div>
+      <textarea class="code">
+        <div class="margin-ornek ml-0">
+          <h2>ml-0</h2>
+        </div>
+
+        <div class="margin-ornek ml-1">
+          <h2>ml-1</h2>
+        </div>
+
+        <div class="margin-ornek ml-2">
+          <h2>ml-2</h2>
+        </div>
+
+        <div class="margin-ornek ml-3">
+          <h2>ml-3</h2>
+        </div>
+
+        <div class="margin-ornek ml-4">
+          <h2>ml-4</h2>
+        </div>
+
+        <div class="margin-ornek ml-5">
+          <h2>ml-5</h2>
+        </div>
+      </textarea>
+      <h2 class="ara-baslik">5.3 Margin Right</h2>
+      <div class="margin-orn">
+        <div class="margin-ornek mr-0">
+          <h2>mr-0</h2>
+        </div>
+        <div class="margin-ornek mr-1">
+          <h2>mr-1</h2>
+        </div>
+        <div class="margin-ornek mr-2">
+          <h2>mr-2</h2>
+        </div>
+        <div class="margin-ornek mr-3">
+          <h2>mr-3</h2>
+        </div>
+        <div class="margin-ornek mr-4">
+          <h2>mr-4</h2>
+        </div>
+        <div class="margin-ornek mr-5">
+          <h2>mr-5</h2>
+        </div>
+      </div>
+      <textarea class="code">
+
+        <div class="margin-ornek mr-0">
+          <h2>mr-0</h2>
+        </div>
+
+        <div class="margin-ornek mr-1">
+          <h2>mr-1</h2>
+        </div>
+
+        <div class="margin-ornek mr-2">
+          <h2>mr-2</h2>
+        </div>
+
+        <div class="margin-ornek mr-3">
+          <h2>mr-3</h2>
+        </div>
+
+        <div class="margin-ornek mr-4">
+          <h2>mr-4</h2>
+        </div>
+
+        <div class="margin-ornek mr-5">
+          <h2>mr-5</h2>
+        </div>
+      </textarea>
+
+      <h2 class="ara-baslik">5.4 Margin Top</h2>
+      <div class="margin-orn">
+        <div class="margin-ornek mt-0">
+          <h2>mt-0</h2>
+        </div>
+        <div class="margin-ornek mt-1">
+          <h2>mt-1</h2>
+        </div>
+        <div class="margin-ornek mt-2">
+          <h2>mt-2</h2>
+        </div>
+        <div class="margin-ornek mt-3">
+          <h2>mt-3</h2>
+        </div>
+        <div class="margin-ornek mt-4">
+          <h2>mt-4</h2>
+        </div>
+        <div class="margin-ornek mt-5">
+          <h2>mt-5</h2>
+        </div>
+      </div>
+      <textarea class="code">
+        <div class="margin-ornek mt-0">
+          <h2>mt-0</h2>
+        </div>
+
+        <div class="margin-ornek mt-1">
+          <h2>mt-1</h2>
+        </div>
+
+        <div class="margin-ornek mt-2">
+          <h2>mt-2</h2>
+        </div>
+
+        <div class="margin-ornek mt-3">
+          <h2>mt-3</h2>
+        </div>
+
+        <div class="margin-ornek mt-4">
+          <h2>mt-4</h2>
+        </div>
+
+        <div class="margin-ornek mt-5">
+          <h2>mt-5</h2>
+        </div>
+      </textarea>
+      <h2 class="ara-baslik">5.5 Margin Bottom</h2>
+      <div class="margin-orn">
+        <div class="margin-ornek mb-0">
+          <h2>mb-0</h2>
+        </div>
+        <div class="margin-ornek mb-1">
+          <h2>mb-1</h2>
+        </div>
+        <div class="margin-ornek mb-2">
+          <h2>mb-2</h2>
+        </div>
+        <div class="margin-ornek mb-3">
+          <h2>mb-3</h2>
+        </div>
+        <div class="margin-ornek mb-4">
+          <h2>mb-4</h2>
+        </div>
+        <div class="margin-ornek mb-5">
+          <h2>mb-5</h2>
+        </div>
+      </div>
+      <textarea class="code">
+        <div class="margin-ornek mb-0">
+          <h2>mb-0</h2>
+        </div>
+
+        <div class="margin-ornek mb-1">
+          <h2>mb-1</h2>
+        </div>
+
+        <div class="margin-ornek mb-2">
+          <h2>mb-2</h2>
+        </div>
+
+        <div class="margin-ornek mb-3">
+          <h2>mb-3</h2>
+        </div>
+
+        <div class="margin-ornek mb-4">
+          <h2>mb-4</h2>
+        </div>
+
+        <div class="margin-ornek mb-5">
+          <h2>mb-5</h2>
+        </div>
+      </textarea>
+      <h2 class="ara-baslik">5.6 Padding</h2>
+      <div class="margin-orn">
+        <div class="margin-ornek p-0">
+          <h2>p-0</h2>
+        </div>
+        <div class="margin-ornek p-1">
+          <h2>p-1</h2>
+        </div>
+        <div class="margin-ornek p-2">
+          <h2>p-2</h2>
+        </div>
+        <div class="margin-ornek p-3">
+          <h2>p-3</h2>
+        </div>
+        <div class="margin-ornek p-4">
+          <h2>p-4</h2>
+        </div>
+        <div class="margin-ornek p-5">
+          <h2>p-5</h2>
+        </div>
+      </div>
+      <textarea class="code">
+        <div class="margin-ornek p-0">
+          <h2>p-0</h2>
+        </div>
+
+        <div class="margin-ornek p-1">
+          <h2>p-1</h2>
+        </div>
+
+        <div class="margin-ornek p-2">
+          <h2>p-2</h2>
+        </div>
+
+        <div class="margin-ornek p-3">
+          <h2>p-3</h2>
+        </div>
+
+        <div class="margin-ornek p-4">
+          <h2>p-4</h2>
+        </div>
+
+        <div class="margin-ornek p-5">
+          <h2>p-5</h2>
+        </div>
+      </textarea>
+      <h2 class="ara-baslik">5.7 Padding Left</h2>
+      <div class="margin-orn">
+        <div class="margin-ornek pl-0">
+          <h2>pl-0</h2>
+        </div>
+        <div class="margin-ornek pl-1">
+          <h2>pl-1</h2>
+        </div>
+        <div class="margin-ornek pl-2">
+          <h2>pl-2</h2>
+        </div>
+        <div class="margin-ornek pl-3">
+          <h2>pl-3</h2>
+        </div>
+        <div class="margin-ornek pl-4">
+          <h2>pl-4</h2>
+        </div>
+        <div class="margin-ornek pl-5">
+          <h2>pl-5</h2>
+        </div>
+      </div>
+      <textarea class="code">
+        <div class="margin-ornek pl-0">
+          <h2>pl-0</h2>
+        </div>
+
+        <div class="margin-ornek pl-1">
+          <h2>pl-1</h2>
+        </div>
+
+        <div class="margin-ornek pl-2">
+          <h2>pl-2</h2>
+        </div>
+
+        <div class="margin-ornek pl-3">
+          <h2>pl-3</h2>
+        </div>
+
+        <div class="margin-ornek pl-4">
+          <h2>pl-4</h2>
+        </div>
+
+        <div class="margin-ornek pl-5">
+          <h2>pl-5</h2>
+        </div>
+      </textarea>
+
+      <h2 class="ara-baslik">5.8 Padding Right</h2>
+      <div class="margin-orn">
+        <div class="margin-ornek pr-0">
+          <h2>pr-0</h2>
+        </div>
+        <div class="margin-ornek pr-1">
+          <h2>pr-1</h2>
+        </div>
+        <div class="margin-ornek pr-2">
+          <h2>pr-2</h2>
+        </div>
+        <div class="margin-ornek pr-3">
+          <h2>pr-3</h2>
+        </div>
+        <div class="margin-ornek pr-4">
+          <h2>pr-4</h2>
+        </div>
+        <div class="margin-ornek pr-5">
+          <h2>pr-5</h2>
+        </div>
+      </div>
+      <textarea class="code">
+        <div class="margin-ornek pr-0">
+          <h2>pr-0</h2>
+        </div>
+
+        <div class="margin-ornek pr-1">
+          <h2>pr-1</h2>
+        </div>
+
+        <div class="margin-ornek pr-2">
+          <h2>pr-2</h2>
+        </div>
+
+        <div class="margin-ornek pr-3">
+          <h2>pr-3</h2>
+        </div>
+
+        <div class="margin-ornek pr-4">
+          <h2>pr-4</h2>
+        </div>
+
+        <div class="margin-ornek pr-5">
+          <h2>pr-5</h2>
+        </div>
+      </textarea>
+      <h2 class="ara-baslik">5.9 Padding Top</h2>
+      <div class="margin-orn">
+        <div class="margin-ornek pt-0">
+          <h2>pt-0</h2>
+        </div>
+        <div class="margin-ornek pt-1">
+          <h2>pt-1</h2>
+        </div>
+        <div class="margin-ornek pt-2">
+          <h2>pt-2</h2>
+        </div>
+        <div class="margin-ornek pt-3">
+          <h2>pt-3</h2>
+        </div>
+        <div class="margin-ornek pt-4">
+          <h2>pt-4</h2>
+        </div>
+        <div class="margin-ornek pt-5">
+          <h2>pt-5</h2>
+        </div>
+      </div>
+      <textarea class="code">
+        <div class="margin-ornek pt-0">
+          <h2>pt-0</h2>
+        </div>
+
+        <div class="margin-ornek pt-1">
+          <h2>pt-1</h2>
+        </div>
+
+        <div class="margin-ornek pt-2">
+          <h2>pt-2</h2>
+        </div>
+
+        <div class="margin-ornek pt-3">
+          <h2>pt-3</h2>
+        </div>
+
+        <div class="margin-ornek pt-4">
+          <h2>pt-4</h2>
+        </div>
+
+        <div class="margin-ornek pt-5">
+          <h2>pt-5</h2>
+        </div>
+      </textarea>
+      <h2 class="ara-baslik">5.10 Padding Bottom</h2>
+      <div class="margin-orn">
+        <div class="margin-ornek pb-0">
+          <h2>pb-0</h2>
+        </div>
+        <div class="margin-ornek pb-1">
+          <h2>pb-1</h2>
+        </div>
+        <div class="margin-ornek pb-2">
+          <h2>pb-2</h2>
+        </div>
+        <div class="margin-ornek pb-3">
+          <h2>pb-3</h2>
+        </div>
+        <div class="margin-ornek pb-4">
+          <h2>pb-4</h2>
+        </div>
+        <div class="margin-ornek pb-5">
+          <h2>pb-5</h2>
+        </div>
+      </div>
+      <textarea class="code">
+        <div class="margin-ornek pb-0">
+          <h2>pb-0</h2>
+        </div>
+
+        <div class="margin-ornek pb-1">
+          <h2>pb-1</h2>
+        </div>
+
+        <div class="margin-ornek pb-2">
+          <h2>pb-2</h2>
+        </div>
+
+        <div class="margin-ornek pb-3">
+          <h2>pb-3</h2>
+        </div>
+
+        <div class="margin-ornek pb-4">
+          <h2>pb-4</h2>
+        </div>
+
+        <div class="margin-ornek pb-5">
+          <h2>pb-5</h2>
+        </div>
+      </textarea>
+      
+      <h1 class="ana-baslik" id="slider">6.Slider</h1>
+      <p class="explanatory">
+        -Soldan sağa, aşağıdan yukarı ve sağdan sola kayacak şekilde 3 farklı slider class'ı oluşturuldu.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*SLIDER*/
+        /*Sola Kayan Slider*/
+        .slider-left{
+          position: relative;
+          width:1200px;
+          height:480px;
+          border: 2px solid purple;
+          border-radius: 5px;
+          margin: auto;
+          overflow: hidden;
+        }
+        .slider-left-content{
+          position:absolute;
+          width: 400%;
+          left:0px;
+          animation: slide-left 12s infinite;
+        }
+        .slider-left-item{
+          width: 25%;
+          float: left;
+        }
+        .slider-left-content:hover{
+          animation-play-state: paused;
+        }
+        
+        @keyframes slide-left {
+          0% {
+              transform: translateX(0px);
+          }   
+          15% {
+              transform: translateX(-1200px);
+          }
+          40% {
+              transform: translateX(-2400px);
+          }
+          50% {
+              transform: translateX(-2400px);
+          }
+          65% {
+              transform: translateX(-3600px);
+          }
+          75% {
+              transform: translateX(-3600px);
+          }
+          90% {
+              transform: translateX(0);
+          }
+        }
+        /*Yukarı Kayan Slider*/
+        .slider-up{
+          position: relative;
+          width:1200px;
+          height:480px;
+          border: 2px solid #ccc;
+          margin: auto;
+          overflow: hidden;
+        }
+        .slider-up-content{
+          position:absolute;
+          height: 400%;
+          right:0;
+          animation: slide-up 10s infinite;
+        }
+        .slider-up-item{
+          height: 25%;
+          float: left;
+        }
+        .slider-up-content:hover{
+          animation-play-state: paused;
+        }
+        
+        @keyframes slide-up {
+          0% {
+              transform: translateY(0px);
+          }   
+          15% {
+              transform: translateY(-480px);
+          }
+          25% {
+              transform: translateY(-480px);
+          }
+          40% {
+              transform: translateY(-960px);
+          }
+          50% {
+              transform: translateY(-960px);
+          }
+          65% {
+              transform: translateY(-1440px);
+          }
+          75% {
+              transform: translateY(-1440px);
+          }
+          90% {
+              transform: translateY(0px);
+          }
+        }
+        
+        /*Sağa Kayan Slider*/
+        .slider-right{
+          position: relative;
+          width:1200px;
+          height:480px;
+          border: 2px solid #ccc;
+          margin: auto;
+          overflow: hidden;
+        }
+        .slider-right-content{
+          position:absolute;
+          width: 400%;
+          right:0;
+          animation: slide-right 10s infinite;
+        }
+        .slider-right-item{
+          width: 25%;
+          float: left;
+        }
+        .slider-right-content:hover{
+          animation-play-state: paused;
+        }
+        @keyframes slide-right {
+          0% {
+              transform: translateX(0px);
+          }   
+          15% {
+              transform: translateX(1200px);
+          }
+          25% {
+              transform: translateX(1200px);
+          }
+          40% {
+              transform: translateX(2400px);
+          }
+          50% {
+              transform: translateX(2400px);
+          }
+          65% {
+              transform: translateX(3600px);
+          }
+          75% {
+              transform: translateX(3600px);
+          }
+          90% {
+              transform: translateX(0px);
+          }
+        }
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+            <div class="slider-left">
+                <div class="slider-left-content">
+                    <div class="slider-left-item">
+                        <img src="https://wallpapers.com/images/hd/1200x480-pink-eclipse-8oc867idlp81x9ox.jpg" alt="">
+                    </div>
+                    <div class="slider-left-item">
+                        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/508fbbdb-59be-41f7-a69c-391b5b5a3a13-profile_banner-480.jpeg" alt="">
+                    </div>
+                    <div class="slider-left-item">
+                        <img src="https://wallpapers.com/images/hd/1200x480-trippy-cloudy-galaxy-o884x4wppksi3lkw.jpg" alt="">
+                    </div>
+                    <div class="slider-left-item">
+                        <img src="https://images.wallpapersden.com/image/download/yoda-with-lightsaber_bGxraGqUmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <textarea class="code">
+              <div class="slider-left">
+                <div class="slider-left-content">
+                    <div class="slider-left-item">
+                        <img src="https://wallpapers.com/images/hd/1200x480-pink-eclipse-8oc867idlp81x9ox.jpg" alt="">
+                    </div>
+                    <div class="slider-left-item">
+                        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/508fbbdb-59be-41f7-a69c-391b5b5a3a13-profile_banner-480.jpeg" alt="">
+                    </div>
+                    <div class="slider-left-item">
+                        <img src="https://wallpapers.com/images/hd/1200x480-trippy-cloudy-galaxy-o884x4wppksi3lkw.jpg" alt="">
+                    </div>
+                    <div class="slider-left-item">
+                        <img src="https://images.wallpapersden.com/image/download/yoda-with-lightsaber_bGxraGqUmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            </textarea>
+
+            <div class="slider-up">
+                <div class="slider-up-content">
+                    <div class="slider-up-item">
+                        <img src="https://images.wallpapersden.com/image/download/modern-warfare-2-4k-cod-gaming_bWloZW2UmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                    </div>
+                    <div class="slider-up-item">
+                        <img src="https://images.wallpapersden.com/image/download/gotham-knights-4k-gaming_bWhpZWWUmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                    </div>
+                    <div class="slider-up-item">
+                        <img src="https://images.wallpapersden.com/image/download/dark-souls-cool-gaming_bWdtZmWUmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                    </div>
+                    <div class="slider-up-item">
+                        <img src="https://gnd-tech.com/content/2021/04/Prey_GOTY_header.0.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <textarea class="code">
+              <div class="slider-up">
+                <div class="slider-up-content">
+                    <div class="slider-up-item">
+                        <img src="https://images.wallpapersden.com/image/download/modern-warfare-2-4k-cod-gaming_bWloZW2UmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                    </div>
+                    <div class="slider-up-item">
+                        <img src="https://images.wallpapersden.com/image/download/gotham-knights-4k-gaming_bWhpZWWUmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                    </div>
+                    <div class="slider-up-item">
+                        <img src="https://images.wallpapersden.com/image/download/dark-souls-cool-gaming_bWdtZmWUmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                    </div>
+                    <div class="slider-up-item">
+                        <img src="https://gnd-tech.com/content/2021/04/Prey_GOTY_header.0.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            </textarea>
+          
+            <div class="slider-right">
+              <div class="slider-right-content">
+                  <div class="slider-right-item">
+                      <img src="https://img.wallpapic.com/i3537-527-241/medium/for-dual-monitors-nature-forest-red-wallpaper.jpg" alt="">
+                  </div>
+                  <div class="slider-right-item">
+                      <img src="https://images.wallpapersden.com/image/download/sunset-over-the-ocean-in-washington_bWloZmaUmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                  </div>
+                  <div class="slider-right-item">
+                      <img src="https://images.wallpapersden.com/image/download/outrun-sunset-at-the-ocean_bGtpZm6UmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                  </div>
+                  <div class="slider-right-item">
+                      <img src="https://wallpapers.com/images/hd/1200x480-autumn-leaves-in-water-h4c2gg1qel06mp3a.jpg" alt="">
+                  </div>
+              </div>
+          </div>
+          <textarea class="code">
+            <div class="slider-right">
+              <div class="slider-right-content">
+                  <div class="slider-right-item">
+                      <img src="https://img.wallpapic.com/i3537-527-241/medium/for-dual-monitors-nature-forest-red-wallpaper.jpg" alt="">
+                  </div>
+                  <div class="slider-right-item">
+                      <img src="https://images.wallpapersden.com/image/download/sunset-over-the-ocean-in-washington_bWloZmaUmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                  </div>
+                  <div class="slider-right-item">
+                      <img src="https://images.wallpapersden.com/image/download/outrun-sunset-at-the-ocean_bGtpZm6UmZqaraWkpJRmZ2VlrWltZQ.jpg" alt="">
+                  </div>
+                  <div class="slider-right-item">
+                      <img src="https://wallpapers.com/images/hd/1200x480-autumn-leaves-in-water-h4c2gg1qel06mp3a.jpg" alt="">
+                  </div>
+              </div>
+          </div>
+          </textarea>
+      <h1 class="ana-baslik" id="tables">7.Tables</h1>
+      <p class="explanatory">
+        -Responsive, bordered, striped ve hoverable olmak üzere 4 farklı tipte tablo class'ı oluşturuldu.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*TABLOLAR*/
+        /*Responsive Tablo*/
+        .table-responsive {
+          overflow-x: auto;
+          border-collapse: collapse;
+          width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .table-responsive th,
+        .table-responsive td,
+        .table-responsive tr {
+          border-bottom: 1px solid #000;
+          height: 40px;
+          vertical-align: center;
+          text-align: center;
+          font-size: 14px;
+        }
+        .table-responsive th {
+          background-color: pink;
+        }
+        
+        /*Bordered Tablo*/
+        .table-bordered {
+          border: 1px solid rgb(0, 1, 14);
+          width: calc(100% - 100px);
+          margin: 50px;
+        }
+        .table-bordered th,
+        .table-bordered td,
+        .table-bordered tr {
+          border: 2px solid #000;
+          height: 40px;
+          vertical-align: center;
+          text-align: center;
+          font-size: 14px;
+        }
+        .table-bordered th {
+          background-color: burlywood;
+        }
+        
+        /*Striped Tablo*/
+        .table-striped {
+          border: 1px solid #000;
+          border-collapse: collapse;
+          width: calc(100% - 100px);
+          margin: 50px;
+        }
+        .table-striped th,
+        .table-striped td,
+        .table-striped tr {
+          border: 1px solid #000;
+          height: 40px;
+          vertical-align: center;
+          text-align: center;
+          font-size: 14px;
+        }
+        .table-striped tr:nth-child(even) {
+          background-color: yellow;
+        }
+        .table-striped tr:nth-child(odd) {
+          background-color: pink;
+        }
+        
+        /*Hoverable Tablo*/
+        .table-hoverable {
+          border: 1px solid #ccc;
+          border-collapse: collapse;
+          width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .table-hoverable th,
+        .table-hoverable td {
+          font-size: 14px;
+          font-family: Arial, Helvetica, sans-serif;
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #ccc;
+        }
+        .table-hoverable th {
+          font-weight: bold;
+          background-color: bisque;
+        }
+        .table-hoverable tr:hover {
+          background-color: rgb(219, 75, 13);
+        }
+        .tm {
+          width: 100px;
+          height: 100px;
+          background-color: #000;
+        }
+        
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+      <h2 class="ara-baslik">7.1 Responsive Table</h2>
+      <table class="table-responsive">
+        <tr>
+          <th>ID</th>
+          <th>İSİM</th>
+          <th>SOYİSİM</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Ahmet</td>
+          <td>Yılmaz</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Ayşe</td>
+          <td>Gezer</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Ali</td>
+          <td>Demir</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Fatma</td>
+          <td>Çelik</td>
+        </tr>
+      </table>
+
+      <textarea class="code">
+        <table class="table-responsive">
+
+          <tr>
+            <th>ID</th>
+            <th>İSİM</th>
+            <th>SOYİSİM</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>Ahmet</td>
+            <td>Yılmaz</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Ayşe</td>
+            <td>Gezer</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Ali</td>
+            <td>Demir</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Fatma</td>
+            <td>Çelik</td>
+          </tr>
+
+        </table>  
+      </textarea>
+    
+      <h2 class="ara-baslik">7.2 Bordered Table</h2>
+      <table class="table-bordered">
+        <tr>
+          <th>ID</th>
+          <th>İSİM</th>
+          <th>SOYİSİM</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Ahmet</td>
+          <td>Yılmaz</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Ayşe</td>
+          <td>Gezer</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Ali</td>
+          <td>Demir</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Fatma</td>
+          <td>Çelik</td>
+        </tr>
+      </table>
+
+      <textarea class="code">
+        <table class="table-bordered">
+
+          <tr>
+            <th>ID</th>
+            <th>İSİM</th>
+            <th>SOYİSİM</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>Ahmet</td>
+            <td>Yılmaz</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Ayşe</td>
+            <td>Gezer</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Ali</td>
+            <td>Demir</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Fatma</td>
+            <td>Çelik</td>
+          </tr>
+
+        </table>  
+      </textarea>
+
+      <h2 class="ara-baslik">7.3 Striped Table</h2>
+      <table class="table-striped">
+        <tr>
+          <th>ID</th>
+          <th>İSİM</th>
+          <th>SOYİSİM</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Ahmet</td>
+          <td>Yılmaz</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Ayşe</td>
+          <td>Gezer</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Ali</td>
+          <td>Demir</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Fatma</td>
+          <td>Çelik</td>
+        </tr>
+      </table>
+
+      <textarea class="code">
+        <table class="table-striped">
+
+          <tr>
+            <th>ID</th>
+            <th>İSİM</th>
+            <th>SOYİSİM</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>Ahmet</td>
+            <td>Yılmaz</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Ayşe</td>
+            <td>Gezer</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Ali</td>
+            <td>Demir</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Fatma</td>
+            <td>Çelik</td>
+          </tr>
+
+        </table>  
+      </textarea>
+
+      <h2 class="ara-baslik">7.4 Hoverable Table</h2>
+      <table class="table-hoverable">
+        <tr>
+          <th>ID</th>
+          <th>İSİM</th>
+          <th>SOYİSİM</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Ahmet</td>
+          <td>Yılmaz</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Ayşe</td>
+          <td>Gezer</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Ali</td>
+          <td>Demir</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Fatma</td>
+          <td>Çelik</td>
+        </tr>
+      </table>
+
+      <textarea class="code">
+        <table class="table-hoverable">
+
+          <tr>
+            <th>ID</th>
+            <th>İSİM</th>
+            <th>SOYİSİM</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>Ahmet</td>
+            <td>Yılmaz</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Ayşe</td>
+            <td>Gezer</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Ali</td>
+            <td>Demir</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Fatma</td>
+            <td>Çelik</td>
+          </tr>
+        </table>  
+      </textarea>
+
+      <h1 class="ana-baslik" id="images">8.Images</h1>
+      <p class="explanatory">
+      -Kenarlıklı kare, kenarlıksız kare, kenarlıklı dairesel, kenarlıksız dairesel olmak üzere her biri kendi içerisinde 100% genişlikte olacak şekilde 4 farklı resim class'ı oluşturuldu.<br>
+      -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*RESİMLER*/
+        /*Kenarlıklı resim */
+        .img-regular-border {
+          max-width: calc(100% - 4px);
+          height: calc(100% - 4px);
+          vertical-align: baseline;
+          border: 5px solid black;
+        }
+        /*Kenarlıksız resim classı*/
+        .img-regular-borderless {
+          max-width: 100%;
+          height: 100%;
+          vertical-align: baseline;
+        }
+        /*Kenarlıksız Dairesel Resim*/
+        .img-rounded-borderless {
+          max-width: 100%;
+          height: 100%;
+          vertical-align: baseline;
+          border-radius: 50%;
+        }
+        /*Kenarlıklı dairesel resim*/
+        .img-rounded-border {
+          max-width: calc(100% - 4px);
+          height: calc(100% - 4px);
+          vertical-align: baseline;
+          border-radius: 50%;
+          border: 5px solid black;
+        }
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+      <div class="resimler">
+        <div class="resim-galeri">
+          <img class="img-regular-border" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7no72ME60k9IB6JJ3xyHaL0_RMoJdlUz-aw&usqp=CAU">
+        </div>
+        <div class="resim-galeri">
+          <img class="img-regular-borderless" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7no72ME60k9IB6JJ3xyHaL0_RMoJdlUz-aw&usqp=CAU">
+        </div>
+        <div class="resim-galeri">
+          <img class="img-rounded-border" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7no72ME60k9IB6JJ3xyHaL0_RMoJdlUz-aw&usqp=CAU">
+        </div>
+        <div class="resim-galeri">
+          <img class="img-rounded-borderless" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7no72ME60k9IB6JJ3xyHaL0_RMoJdlUz-aw&usqp=CAU">
+        </div>
+      </div>
+
+      <textarea class="code">
+          
+        <div class="resim-galeri">
+          <img class="img-regular-border" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7no72ME60k9IB6JJ3xyHaL0_RMoJdlUz-aw&usqp=CAU">
+        </div>
+
+        <div class="resim-galeri">
+          <img class="img-regular-borderless" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7no72ME60k9IB6JJ3xyHaL0_RMoJdlUz-aw&usqp=CAU">
+        </div>
+
+        <div class="resim-galeri">
+          <img class="img-rounded-border" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7no72ME60k9IB6JJ3xyHaL0_RMoJdlUz-aw&usqp=CAU">
+        </div>
+
+        <div class="resim-galeri">
+          <img class="img-rounded-borderless" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7no72ME60k9IB6JJ3xyHaL0_RMoJdlUz-aw&usqp=CAU">
+        </div>
+       </textarea>
+      
+      
+      <h1 class="ana-baslik" id="button">9.Button</h1>
+      <p class="explanatory">
+        -5 tane klasik, 5 tane outline yapıda olacak şekilde 10 adet buton class'ı oluşturuldu..<br>
+        -Klasik yapıda olan butonların border ve hover renkleri aynı olup background rengi aynı rengin %20 saydamlık verilmiş halidir. Buton üzerine gelindiğinde hover ve border aynı rengi alarak bir bütünlük oluşturuldu.<br>
+        -Outline butonlarda bir arka plan rengi olmamakla beraber yazı ve border rengi aynı olacak şekilde ayarlandı. Hover edildiğinde aynı rengin farklı tonu görülmektedir.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*BUTTON*/
+
+        /*Kırmızı Buton*/
+        .btn-red {
+          width: 200px;
+          height: 50px;
+          background-color: var(--btn-red-bg-color);
+          border: 2px solid var(--btn-red-border-color);
+          border-radius: 50px;
+          transition: background-color 0.5s;
+          color: var(--btn-red-text-color);
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-red:hover {
+          background-color: var(--btn-red-border-color);
+          color: var(--btn-red-hover-text-color);
+        }
+        /*Pembe Buton*/
+        .btn-pink {
+          width: 200px;
+          height: 50px;
+          background-color: var(--btn-pink-bg-color);
+          border: 2px solid var(--btn-pink-border-color);
+          border-radius: 50px;
+          transition: background-color 0.5s;
+          color: var(--btn-pink-text-color);
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-pink:hover {
+          background-color: var(--btn-pink-border-color);
+          color: var(--btn-pink-hover-text-color);
+        }
+        /*Mor Buton*/
+        .btn-purple {
+          width: 200px;
+          height: 50px;
+          background-color: var(--btn-purple-bg-color);
+          border: 2px solid var(--btn-purple-border-color);
+          border-radius: 50px;
+          transition: background-color 0.5s;
+          color: var(--btn-purple-text-color);
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-purple:hover {
+          background-color: var(--btn-purple-border-color);
+          color: var(--btn-purple-hover-text-color);
+        }
+        /*İndigo Buton*/
+        .btn-indigo {
+          width: 200px;
+          height: 50px;
+          background-color: var(--btn-indigo-bg-color);
+          border: 2px solid var(--btn-indigo-border-color);
+          border-radius: 50px;
+          transition: background-color 0.5s;
+          color: var(--btn-indigo-text-color);
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-indigo:hover {
+          background-color: var(--btn-indigo-border-color);
+          color: var(--btn-indigo-hover-text-color);
+        }
+        /*Teal Buton*/
+        .btn-teal {
+          width: 200px;
+          height: 50px;
+          background-color: var(--btn-teal-bg-color);
+          border: 2px solid var(--btn-teal-border-color);
+          border-radius: 50px;
+          transition: background-color 0.5s;
+          color: var(--btn-teal-text-color);
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-teal:hover {
+          background-color: var(--btn-teal-border-color);
+          color: var(--btn-teal-hover-text-color);
+        }
+        
+        /*BUTTON-OUTLINE*/
+        
+        /*aqua outline buton*/
+        .btn-outline-aqua {
+          width: 200px;
+          height: 50px;
+          border: 2px solid var(--btn-outline-aqua-border-color);
+          border-radius: 5px;
+          transition: background-color 0.5s;
+          color: var(--btn-outline-aqua-border-color);
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-outline-aqua:hover {
+          background-color: var(--btn-outline-aqua-hover-background-color);
+          color: var(--btn-outline-aqua-hover-text-color);
+        }
+        /*mavi outline buton*/
+        .btn-outline-blue {
+          width: 200px;
+          height: 50px;
+          border: 2px solid var(--btn-outline-blue-border-color);
+          border-radius: 5px;
+          transition: background-color 0.5s;
+          color: var(--btn-outline-blue-border-color);
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-outline-blue:hover {
+          background-color: var(--btn-outline-blue-hover-background-color);
+          color: var(--btn-outline-blue-hover-text-color);
+        }
+        
+        /*Yeşil outline buton*/
+        .btn-outline-green {
+          width: 200px;
+          height: 50px;
+          border: 2px solid var(--btn-outline-green-border-color);
+          border-radius: 5px;
+          transition: background-color 0.5s;
+          color: var(--btn-outline-green-border-color);
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-outline-green:hover {
+          background-color: var(--btn-outline-green-hover-background-color);
+          color: var(--btn-outline-green-hover-text-color);
+        }
+        
+        /*Sarı outline buton*/
+        .btn-outline-yellow {
+          width: 200px;
+          height: 50px;
+          border: 2px solid var(--btn-outline-yellow-border-color);
+          border-radius: 5px;
+          transition: background-color 0.5s;
+          color: var(--btn-outline-yellow-border-color);
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-outline-yellow:hover {
+          background-color: var(--btn-outline-yellow-hover-background-color);
+          color: var(--btn-outline-yellow-hover-text-color);
+        }
+        
+        /*Siyah outline buton*/
+        .btn-outline-black {
+          width: 200px;
+          height: 50px;
+          border: 2px solid var(--btn-outline-black-border-color);
+          border-radius: 5px;
+          transition: background-color 0.5s;
+          color: var(--btn-outline-black-border-color);
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-outline-black:hover {
+          background-color: var(--btn-outline-black-hover-background-color);
+          color: var(--btn-outline-black-hover-text-color);
+        }
+      </textarea>
+
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+      <h2 class="ara-baslik">9.1 Classic Button</h2>
+       <div>
+        <button type="button" class="btn-red btn">TEXT</button>
+        <button type="button" class="btn-pink btn">TEXT</button>
+        <button type="button" class="btn-purple btn">TEXT</button>
+        <button type="button" class="btn-indigo btn">TEXT</button>
+        <button type="button" class="btn-teal btn">TEXT</button>
+       </div>
+
+       <textarea class="code">
+        <button type="button" class="btn-red btn">TEXT</button>
+
+        <button type="button" class="btn-pink btn">TEXT</button>
+
+        <button type="button" class="btn-purple btn">TEXT</button>
+
+        <button type="button" class="btn-indigo btn">TEXT</button>
+
+        <button type="button" class="btn-teal btn">TEXT</button>
+       </textarea>
+
+      <h2 class="ara-baslik">9.2 Outline Button</h2>
+      <div>
+        <button type="button" class="btn-outline-aqua btn">TEXT</button>
+        <button type="button" class="btn-outline-blue btn">TEXT</button>
+        <button type="button" class="btn-outline-green btn">TEXT</button>
+        <button type="button" class="btn-outline-yellow btn">TEXT</button>
+        <button type="button" class="btn-outline-black btn">TEXT</button>
+      </div>
+
+      <textarea class="code">
+        <button type="button" class="btn-outline-aqua btn">TEXT</button>
+
+        <button type="button" class="btn-outline-blue btn">TEXT</button>
+
+        <button type="button" class="btn-outline-green btn">TEXT</button>
+
+        <button type="button" class="btn-outline-yellow btn">TEXT</button>
+
+        <button type="button" class="btn-outline-black btn">TEXT</button>
+       </textarea>
+
+      <h1 class="ana-baslik" id="owerflow-div">10.Div</h1>
+      <p class="explanatory">
+        -Tamamen ortalanmış şekilde görünen, yüksekliğe göre ortalanan, genişliğe göre ortalanan ve orijinal boyutunda overflow:hidden olarak görünen resimler için 4 farklı div oluşturuldu.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*RESİMLER İÇİN OVERFLOW DİV*/
+        .overflowdiv {
+          display: flex;
+          margin: 10px;
+        }
+        /*Resimin ortalı bir şelikde görüneni*/
+        
+        .ortalanmis-image {
+          display: flex;
+          vertical-align: center;
+          align-items: center;
+          width: calc(300px - 40px);
+          height: calc(300px - 40px);
+          margin: 10px;
+          padding: 10px;
+          background-color: bisque;
+          border: 2px solid brown;
+        }
+        
+        .ortalanmis-image img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+        
+        /*Resimin yüksekliğe göre ortalananı*/
+        
+        .yukseklik-ortalanmis-image {
+          height: calc(300px - 40px);
+          width: calc(300px - 40px);
+          overflow: hidden;
+          margin: 10px;
+          padding: 10px;
+          display: table-cell;
+          height: 300px;
+          margin: 10px;
+          background-color: bisque;
+          border: 2px solid brown;
+        }
+        
+        .yukseklik-ortalanmis-image img {
+          height: 100%;
+          width: auto;
+        }
+        
+        /*Resimin genişliğe göre ortalananı*/
+        .genislik-ortalanmis-image {
+          width: calc(300px - 40px);
+          height: calc(300px - 40px);
+          margin: 10px;
+          padding: 10px;
+          display: table-cell;
+          vertical-align: middle;
+          margin: 10px;
+          background-color: bisque;
+          border: 2px solid brown;
+        }
+        
+        .genislik-ortalanmis-image img {
+          max-width: 100%;
+          height: auto;
+        }
+        
+        /*Resmin orijinal boyutu içinde overflow:hidden olarak görüneni*/
+        
+        .orijinal-image {
+          width: calc(300px - 40px);
+          height: calc(300px - 40px);
+          margin: 10px;
+          padding: 10px;
+          overflow: hidden;
+          background-color: bisque;
+          border: 2px solid brown;
+        }
+        .orijinal-image img {
+          width: auto;
+          height: auto;
+        }        
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+      <div class="overflowdiv">
+        <div class="ortalanmis-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/5b99048f55b02ce496ffeb2d/1605942960996-08KLJEDCFQCVJV29F6XL/Winter+Drawing_Dec20-01.png?format=1500w" alt="Resim" />
+        </div>
+        <div class="yukseklik-ortalanmis-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/5b99048f55b02ce496ffeb2d/1605942960996-08KLJEDCFQCVJV29F6XL/Winter+Drawing_Dec20-01.png?format=1500w" alt="Resim" />
+        </div>
+        <div class="genislik-ortalanmis-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/5b99048f55b02ce496ffeb2d/1605942960996-08KLJEDCFQCVJV29F6XL/Winter+Drawing_Dec20-01.png?format=1500w" alt="Resim" />
+        </div>
+        <div class="orijinal-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/5b99048f55b02ce496ffeb2d/1605942960996-08KLJEDCFQCVJV29F6XL/Winter+Drawing_Dec20-01.png?format=1500w" alt="Resim" />
+        </div>
+      </div>
+      <textarea class="code">
+        <div class="ortalanmis-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/5b99048f55b02ce496ffeb2d/1605942960996-08KLJEDCFQCVJV29F6XL/Winter+Drawing_Dec20-01.png?format=1500w" alt="Resim" />
+        </div>
+
+        <div class="yukseklik-ortalanmis-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/5b99048f55b02ce496ffeb2d/1605942960996-08KLJEDCFQCVJV29F6XL/Winter+Drawing_Dec20-01.png?format=1500w" alt="Resim" />
+        </div>
+
+        <div class="genislik-ortalanmis-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/5b99048f55b02ce496ffeb2d/1605942960996-08KLJEDCFQCVJV29F6XL/Winter+Drawing_Dec20-01.png?format=1500w" alt="Resim" />
+        </div>
+
+        <div class="orijinal-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/5b99048f55b02ce496ffeb2d/1605942960996-08KLJEDCFQCVJV29F6XL/Winter+Drawing_Dec20-01.png?format=1500w" alt="Resim" />
+        </div>
+
+      </textarea>
+      <h1 class="ana-baslik" id="navigationbar">11.Navbar</h1>
+      <p class="explanatory">
+        -İnline menu, flex menü ve sola yaslı dikey menü olmak üzere 3 tane navbar oluşturuldu.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*NAVBAR*/
+        /*İnline Navbar*/
+        .inline-navbar {
+          background-color: gray;
+          list-style-type: none;
+          width: 100%;
+        }
+        .inline-navbar li {
+          display: inline-block;
+          width: 180px;
+          padding: 15px;
+          margin-right: 20px;
+          margin-left: -30px;
+        }
+        .inline-navbar li:hover {
+          background-color: rgb(255, 0, 0);
+          color: white;
+          transition: 0.5;
+        }
+        .inline-navbar li a {
+          text-decoration: none;
+          color: black;
+          font-size: large;
+          font-weight: bolder;
+          font-family: "Courier New", Courier, monospace;
+        }
+        
+        /*Flex Navbar*/
+        
+        .flex-navbar {
+          background-color: gray;
+          list-style-type: none;
+          width: 100%;
+          display: flex;
+        }
+        .flex-navbar li {
+          width: 180px;
+          padding: 15px;
+          margin-right: 20px;
+          margin-left: -30px;
+        }
+        .flex-navbar li:hover {
+          background-color: rgb(255, 0, 0);
+          color: white;
+          transition: 0.5;
+        }
+        .flex-navbar li a {
+          text-decoration: none;
+          color: black;
+          font-size: large;
+          font-weight: bolder;
+          font-family: "Courier New", Courier, monospace;
+        }
+        
+        /*Dikey Navbar*/
+        
+        .vertical-navbar {
+          list-style-type: none;
+          width: 20%;
+          background-color: #000;
+          padding-right: 30px;
+        }
+        .vertical-navbar li {
+          padding: 16px;
+          border-bottom: 1px solid white;
+        }
+        .vertical-navbar li:hover {
+          background-color: red;
+          color: white;
+        }
+        .vertical-navbar li a {
+          text-decoration: none;
+          color: white;
+          font-size: large;
+          font-weight: bolder;
+          font-family: "Courier New", Courier, monospace;
+        }
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+
+      <h2 class="ara-baslik">11.1 Inline Navbar</h2>
+      <ul class="inline-navbar">
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">Hizmetler</a></li>
+        <li><a href="#">Şubeler</a></li>
+        <li><a href="#">Galeri</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+      <textarea class="code">
+        <ul class="inline-navbar">
+
+          <li><a href="#">Anasayfa</a></li>
+
+          <li><a href="#">Hakkımızda</a></li>
+
+          <li><a href="#">Hizmetler</a></li>
+
+          <li><a href="#">Şubeler</a></li>
+
+          <li><a href="#">Galeri</a></li>
+
+          <li><a href="#">İletişim</a></li>
+
+        </ul>
+      </textarea>
+      <h2 class="ara-baslik">11.2 Flex Navbar</h2>
+      <ul class="flex-navbar">
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">Hizmetler</a></li>
+        <li><a href="#">Şubeler</a></li>
+        <li><a href="#">Galeri</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+      <textarea class="code">
+        <ul class="flex-navbar">
+
+          <li><a href="#">Anasayfa</a></li>
+
+          <li><a href="#">Hakkımızda</a></li>
+
+          <li><a href="#">Hizmetler</a></li>
+
+          <li><a href="#">Şubeler</a></li>
+
+          <li><a href="#">Galeri</a></li>
+
+          <li><a href="#">İletişim</a></li>
+
+        </ul>
+
+      </textarea>
+      <h2 class="ara-baslik">11.3 Vertical Navbar</h2>
+      <ul class="vertical-navbar">
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">Hizmetler</a></li>
+        <li><a href="#">Şubeler</a></li>
+        <li><a href="#">Galeri</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+      <textarea class="code">
+        <ul class="vertical-navbar">
+
+          <li><a href="#">Anasayfa</a></li>
+
+          <li><a href="#">Hakkımızda</a></li>
+
+          <li><a href="#">Hizmetler</a></li>
+
+          <li><a href="#">Şubeler</a></li>
+
+          <li><a href="#">Galeri</a></li>
+
+          <li><a href="#">İletişim</a></li>
+
+        </ul>
+      </textarea>
+      <h1 class="ana-baslik" id="dropdown-menu">12.Dropdown Menü</h1>
+      <p class="explanatory"> Projelerinizde kullanabileceğiniz bir dropdown menü class'ı oluşturuldu.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*DROPDOWN MENU*/
+        .dropdown-menu {
+          background-color: gray;
+          list-style-type: none;
+          width: 90%;
+        }
+        .dropdown-menu li {
+          display: inline-block;
+          position: relative;
+          width: 140px;
+          padding: 14px;
+          margin-right: 10px;
+        }
+        .dropdown-menu li:hover {
+          background-color: rgb(255, 0, 0);
+          color: white;
+          transition: 0.5;
+        }
+        .dropdown-menu li a {
+          text-decoration: none;
+          display: block;
+          color: black;
+          font-size: large;
+          font-weight: bolder;
+          font-family: "Courier New", Courier, monospace;
+        }
+        .dropdown-menu li ul.dropdown-content li {
+          display: block;
+        }
+        
+        .dropdown-menu li ul.dropdown-content {
+          width: 100%;
+          background-color: gray;
+          position: absolute;
+          z-index: 1;
+          display: none;
+          padding: 0px;
+          margin: 0px;
+          margin-top: 14px;
+        }
+        .dropdown-menu li:hover ul.dropdown-content {
+          display: block;
+        }
+        
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+
+      <ul class="dropdown-menu">
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">Hizmetler</a></li>
+        <li>
+          <a href="#">Şubeler</a>
+            <ul class="dropdown-content">
+              <li><a href="#">İstanbul</a></li>
+              <li><a href="#">Ankara</a></li>
+              <li><a href="#">İzmir</a></li>
+              <li><a href="#">Konya</a></li>
+              <li><a href="#">Antalya</a></li>
+            </ul>
+          
+        </li>
+        <li><a href="#">Galeri</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+      <textarea class="code">
+
+        <ul class="dropdown-menu">
+
+          <li><a href="#">Anasayfa</a></li>
+
+          <li><a href="#">Hakkımızda</a></li>
+
+          <li><a href="#">Hizmetler</a></li>
+
+          <li>
+            <a href="#">Şubeler</a>
+
+              <ul class="dropdown-content">
+
+                <li><a href="#">İstanbul</a></li>
+
+                <li><a href="#">Ankara</a></li>
+
+                <li><a href="#">İzmir</a></li>
+
+                <li><a href="#">Konya</a></li>
+
+                <li><a href="#">Antalya</a></li>
+
+              </ul>
+            
+          </li>
+          <li><a href="#">Galeri</a></li>
+
+          <li><a href="#">İletişim</a></li>
+
+        </ul>
+
+      </textarea>
+
+      <h1 class="ana-baslik" id="form">13.Form</h1>
+      <p class="explanatory"> Projelerinizde kullanabileceğiniz bir form class'ı oluşturuldu.<br>
+        -Oluşturulan class'ların CSS özellikleri aşağıdaki gibidir:
+      </p>
+      <textarea class="code">
+        /*FORM*/
+        .bf-baslik{
+            margin-left:220px;
+          }
+          .bilgi-form{
+            border-collapse: collapse;
+            
+          }
+          .bilgi-form .baslik{
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            padding:8px;
+            background-color: beige;
+            text-align: center;
+            border:2px solid #3e2723;
+           
+          }
+          .bilgi-form td{
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            padding:8px;
+            background-color: beige;
+            border:1px solid #3e2723;
+            text-align: center;
+          }
+          .bilgi-form input{
+            padding:8px;
+            background-color: beige;
+            border:1px solid #3e2723;
+            width:calc(100% - 16px);
+          }
+          .bilgi-form input[type="submit"]{
+            width:100%;
+            height:50px;
+            border: 2px solid  #3e2723;
+            color: #3e2723;
+            background-color: antiquewhite;
+            font-size: large;
+            font-weight: bold;
+          }
+          .bilgi-form input[type="submit"]:hover{
+            background-color: #3e2723;
+            color:white;
+          }
+        
+      </textarea>
+      <p class="explanatory">
+        -Oluşturululan class yapılarını aşağıda inceleyebilir, kullanmak istediğiniz class yapısını seçip, projenize dahil edebilirsiniz:
+      </p>
+      <h2 class="ara-baslik bf-baslik" >Öğretmen Kayıt Formu</h2>
+      <form method="post "action="#">
+            <table class="bilgi-form">
+                    <tr>
+                        <td><label for="name">Ad-Soyad:</label></td>
+                        <td><input type="text" id="name" name="name" placeholder="Ad-Soyad Giriniz." required ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Telefon No:</label></td>
+                        <td><input type="tel" maxlength="10" id="phone" name="phone" placeholder="Tel No Giriniz" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-mail:</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="E-mail Giriniz"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Şifre:</label></td>
+                        <td><input type="password" id="password" name="password" placeholder="Şifrenizi Giriniz" required ></td>
+                    </tr>
+                    <tr>
+                        <td><label>Cinsiyet:</label></td>
+                        <td>
+                          <input type="radio" id="kadin" name="gender" value="kadın"><label  for="kadin">Kadın</label>
+                            <input type="radio" id="erkek" name="gender" value="erkek"><label for="erkek">Erkek</label>
+                        </td>
+                    </tr>
+                    <tr>
+                      <tr>
+                        <td><label for="Ders Sayısı">Haftalık Ders Sayınız</label></td>
+                        <td><input type="number" id="ders" name="ders" min="5" max="45"></td>
+                    </tr>
+                        <td><label for="">Ders Verebileceğiniz Günleri Seçiniz:</label></td>
+                        <td>
+                            <input type="checkbox" id="Pazartesi" name="Pazartesi"><label for="Pazartesi">Pazartesi</label>
+                            <input type="checkbox" id="Salı" name="Salı"><label for="Salı">Salı</label>
+                            <input type="checkbox" id="Çarşamba" name="Çarşamba"><label for="Çarşamba">Çarşamba</label>
+                            <input type="checkbox" id="Perşembe" name="Perşembe"><label for="Perşembe">Perşembe</label>
+                            <input type="checkbox" id="Cuma" name="Cuma"><label for="Cuma">Cuma</label>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <textarea cols="80" rows="8">Eklemek İstedikleriniz:</textarea>
+                      </td>
+                  </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Kaydet"></td>
+                    </tr>
+            </table>
+    </form>
+    <textarea class="code">
+
+      <h2 class="ara-baslik bf-baslik" >Öğretmen Kayıt Formu</h2>
+
+      <form method="post "action="#">
+
+            <table class="bilgi-form">
+
+                    <tr>
+                        <td><label for="name">Ad-Soyad:</label></td>
+                        <td><input type="text" id="name" name="name" placeholder="Ad-Soyad Giriniz." required ></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="phone">Telefon No:</label></td>
+                        <td><input type="tel" maxlength="10" id="phone" name="phone" placeholder="Tel No Giriniz" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="email">E-mail:</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="E-mail Giriniz"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="password">Şifre:</label></td>
+                        <td><input type="password" id="password" name="password" placeholder="Şifrenizi Giriniz" required ></td>
+                    </tr>
+                    <tr>
+                        <td><label>Cinsiyet:</label></td>
+                        <td>
+                          <input type="radio" id="kadin" name="gender" value="kadın"><label  for="kadin">Kadın</label>
+                            <input type="radio" id="erkek" name="gender" value="erkek"><label for="erkek">Erkek</label>
+                        </td>
+                    </tr>
+                    <tr>
+                      <tr>
+                        <td><label for="Ders Sayısı">Haftalık Ders Sayınız</label></td>
+                        <td><input type="number" id="ders" name="ders" min="5" max="45"></td>
+                    </tr>
+                        <td><label for="">Ders Verebileceğiniz Günleri Seçiniz:</label></td>
+                        <td>
+                            <input type="checkbox" id="Pazartesi" name="Pazartesi"><label for="Pazartesi">Pazartesi</label>
+                            <input type="checkbox" id="Salı" name="Salı"><label for="Salı">Salı</label>
+                            <input type="checkbox" id="Çarşamba" name="Çarşamba"><label for="Çarşamba">Çarşamba</label>
+                            <input type="checkbox" id="Perşembe" name="Perşembe"><label for="Perşembe">Perşembe</label>
+                            <input type="checkbox" id="Cuma" name="Cuma"><label for="Cuma">Cuma</label>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <textarea cols="80" rows="8">Eklemek İstedikleriniz:</textarea>
+                      </td>
+                  </tr>
+                       
+            </table>
+    </form>
+    </textarea>
+    </div>
+  </section>
+  
+</body>
+</html>
